@@ -1,6 +1,6 @@
 # Valida-IFC-By-Codex
 
-Interface estatica para validar arquivos IFC no navegador com web-ifc e Three.js.
+Interface estatica para validar arquivos IFC no navegador com xeokit e web-ifc.
 
 Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 
@@ -8,8 +8,8 @@ Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 
 - Carrega um ou mais arquivos `.ifc`.
 - Mostra progresso de carregamento.
-- Renderiza geometria IFC real usando `three` e `web-ifc`, sem upload do IFC para servidor.
-- Permite orbit, pan, zoom, enquadrar e clique nos objetos.
+- Renderiza geometria IFC real usando `xeokit SDK` e `web-ifc`, sem upload do IFC para servidor.
+- Permite orbit, pan, zoom, enquadrar e clique nos objetos, com selecao azul no item clicado.
 - Inclui duas paginas comparativas de viewer para avaliacao: That Open Components e xeokit SDK.
 - Permite selecionar multiplos criterios de auditoria.
 - Permite solicitar verificacoes em linguagem natural com interpretacao local.
@@ -33,7 +33,7 @@ Sem esse backend, o botao usa a interpretacao local por palavras-chave.
 
 ## Estrutura
 
-- `index.html`: aplicacao completa, com CSS e JavaScript embutidos.
+- `index.html`: aplicacao completa, com viewer principal em xeokit, CSS e JavaScript embutidos.
 - `viewer-thatopen.html`: viewer experimental com That Open Components, Fragments e `web-ifc`.
 - `viewer-xeokit.html`: viewer experimental com xeokit SDK e `WebIFCLoaderPlugin`.
 - `docs/`: exemplos de matriz/criterios.
