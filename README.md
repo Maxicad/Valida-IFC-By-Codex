@@ -13,6 +13,7 @@ Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 - Inclui duas paginas comparativas de viewer para avaliacao: That Open Components e xeokit SDK.
 - Permite selecionar multiplos criterios de auditoria.
 - Permite validar por criterio digitado com interpretacao local por palavras-chave.
+- Relaciona criterios digitados em uma lista de **Critérios customizados** para ativar/desativar.
 - Calcula resultado por criterio e media final ponderada.
 - Colore o modelo conforme o criterio selecionado.
 - Inclui criterio local para localizar `IfcWindow` com altura menor que 50cm.
