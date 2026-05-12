@@ -1,15 +1,10 @@
 {
-  "name": "ifc-audit-cloud-test",
+  "name": "valida-ifc-by-codex",
   "version": "1.0.0",
-  "description": "Interface estatica para auditoria IFC no navegador.",
+  "description": "Interface estatica leve para validacao IFC no navegador.",
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "python3 -m http.server 4173"
-  },
-  "dependencies": {
-    "three": "0.165.0",
-    "web-ifc": "0.0.59",
-    "web-ifc-three": "0.0.126"
+    "start": "node scripts/serve-local.mjs"
   }
 }

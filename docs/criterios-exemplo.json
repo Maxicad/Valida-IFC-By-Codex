@@ -2,18 +2,56 @@
   "project": {
     "name": "Projeto exemplo",
     "type": "arquitetura",
-    "checklistName": "Teste simples - paredes com nivel"
+    "checklistName": "Validacao IFC - criterios iniciais"
   },
   "criteria": [
     {
       "name": "Paredes possuem nivel da construcao definido",
-      "type": "wall-storey-defined",
+      "type": "wall-storey",
       "target": "IFCWALL|IFCWALLSTANDARDCASE",
       "pattern": "IFCBUILDINGSTOREY",
       "threshold": 100,
-      "projectType": "todos",
-      "category": "Niveis da Construcao",
-      "severity": "high"
+      "weight": 2
+    },
+    {
+      "name": "Nomenclatura do arquivo conforme Diretrizes",
+      "type": "file-name",
+      "target": "arquivo",
+      "pattern": "COD-DIS-FASE-0000-TOR-PAV-R00.ifc",
+      "threshold": 100,
+      "weight": 1
+    },
+    {
+      "name": "Project Information preenchida",
+      "type": "project-info",
+      "target": "IFCPROJECT",
+      "pattern": "nome/informacao nao generica",
+      "threshold": 100,
+      "weight": 1.5
+    },
+    {
+      "name": "Modelo nao excede 300MB",
+      "type": "file-size",
+      "target": "arquivo",
+      "pattern": "<=300MB",
+      "threshold": 100,
+      "weight": 1
+    },
+    {
+      "name": "Sem componentes duplicados ou sobrepostos",
+      "type": "no-duplicates",
+      "target": "objetos IFC",
+      "pattern": "classe + nome + posicionamento/representacao",
+      "threshold": 100,
+      "weight": 2
+    },
+    {
+      "name": "Objetos identificados, sem nomes genericos",
+      "type": "object-names",
+      "target": "objetos IFC",
+      "pattern": "nome preenchido e nao generico",
+      "threshold": 100,
+      "weight": 1.5
     }
   ]
 }

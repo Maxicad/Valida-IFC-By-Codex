@@ -1,2 +1,7 @@
-criterio;tipo;alvo;padrao;percentual;tipo de projeto;categoria;severidade
-Paredes possuem nivel da construcao definido;wall-storey-defined;IFCWALL|IFCWALLSTANDARDCASE;IFCBUILDINGSTOREY;100;todos;Niveis da Construcao;alta
+criterio;tipo;alvo;padrao;percentual;peso
+Paredes possuem nivel da construcao definido;wall-storey;IFCWALL|IFCWALLSTANDARDCASE;IFCBUILDINGSTOREY;100;2
+Nomenclatura do arquivo conforme Diretrizes;file-name;arquivo;COD-DIS-FASE-0000-TOR-PAV-R00.ifc;100;1
+Project Information preenchida;project-info;IFCPROJECT;nome/informacao nao generica;100;1.5
+Modelo nao excede 300MB;file-size;arquivo;<=300MB;100;1
+Sem componentes duplicados ou sobrepostos;no-duplicates;objetos IFC;classe + nome + posicionamento/representacao;100;2
+Objetos identificados sem nomes genericos;object-names;objetos IFC;nome preenchido e nao generico;100;1.5
