@@ -1,6 +1,6 @@
-# IFC Auditoria - teste na nuvem
+# Valida-IFC-By-Codex
 
-Interface estatica para testar arquivos IFC no navegador.
+Interface estatica para validar arquivos IFC no navegador com IFC.js, Web-IFC e Three.js.
 
 ## O que faz
 
@@ -8,10 +8,12 @@ Interface estatica para testar arquivos IFC no navegador.
 - Mostra progresso de carregamento.
 - Renderiza geometria IFC real usando `three`, `web-ifc` e `web-ifc-three`.
 - Permite orbit, pan, zoom, enquadrar e clique nos objetos.
-- Executa o criterio simples: paredes `IFCWALL` / `IFCWALLSTANDARDCASE` devem estar vinculadas a `IFCBUILDINGSTOREY`.
+- Permite selecionar multiplos criterios de auditoria.
+- Calcula resultado por criterio e media final ponderada.
+- Colore o modelo conforme o criterio selecionado.
 
 ## GitHub Pages
 
-O workflow em `.github/workflows/pages.yml` publica o conteudo estatico do branch `main` no GitHub Pages.
+O GitHub Pages publica o conteudo estatico da branch `main`.
 
-Se Pages estiver habilitado para GitHub Actions, a URL sera exibida na aba **Actions** depois do deploy.
+Site: https://maxicad.github.io/Valida-IFC-By-Codex/
