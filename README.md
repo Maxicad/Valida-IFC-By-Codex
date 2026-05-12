@@ -12,24 +12,19 @@ Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 - Permite orbit, pan, zoom, enquadrar e clique nos objetos, com selecao azul no item clicado.
 - Inclui duas paginas comparativas de viewer para avaliacao: That Open Components e xeokit SDK.
 - Permite selecionar multiplos criterios de auditoria.
-- Permite solicitar verificacoes em linguagem natural com interpretacao local.
+- Permite validar por criterio digitado com interpretacao local por palavras-chave.
 - Calcula resultado por criterio e media final ponderada.
 - Colore o modelo conforme o criterio selecionado.
 
 ## IA e login
 
-O GitHub Pages e estatico, entao nao deve guardar chave de API ou token ChatGPT no HTML. Para usar LLM com login, configure um backend seguro/OAuth e exponha na pagina:
-
-- `window.VALIDA_IFC_AI_AUTH_URL`: URL de login.
-- `window.VALIDA_IFC_AI_ENDPOINT`: endpoint que recebe `{ text, criteria }` e retorna os criterios selecionados.
-
-Sem esse backend, o botao usa a interpretacao local por palavras-chave.
+O uso de LLM/ChatGPT foi removido da interface de teste por enquanto. O campo de texto atual usa apenas interpretacao local por palavras-chave.
 
 ## A fazer
 
 - Adicionar backend/conector autenticado para usar LLMs com login do usuario.
 - Implementar fluxo seguro de autenticacao para ChatGPT/LLM sem expor chave de API ou token no HTML estatico.
-- Conectar a solicitacao em linguagem natural ao backend quando o viewer, upload e criterios estiverem estaveis.
+- Conectar a validacao por criterio digitado ao backend quando o viewer, upload e criterios estiverem estaveis.
 
 ## Estrutura
 
