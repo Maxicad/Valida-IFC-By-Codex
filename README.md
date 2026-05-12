@@ -1,6 +1,6 @@
 # Valida-IFC-By-Codex
 
-Interface estatica para validar arquivos IFC no navegador com IFC.js, Web-IFC e Three.js.
+Interface estatica para validar arquivos IFC no navegador com web-ifc e Three.js.
 
 Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 
@@ -8,11 +8,21 @@ Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 
 - Carrega um ou mais arquivos `.ifc`.
 - Mostra progresso de carregamento.
-- Renderiza geometria IFC real usando `three`, `web-ifc` e `web-ifc-three`.
+- Renderiza geometria IFC real usando `three` e `web-ifc`, sem upload do IFC para servidor.
 - Permite orbit, pan, zoom, enquadrar e clique nos objetos.
 - Permite selecionar multiplos criterios de auditoria.
+- Permite solicitar verificacoes em linguagem natural com interpretacao local.
 - Calcula resultado por criterio e media final ponderada.
 - Colore o modelo conforme o criterio selecionado.
+
+## IA e login
+
+O GitHub Pages e estatico, entao nao deve guardar chave de API ou token ChatGPT no HTML. Para usar LLM com login, configure um backend seguro/OAuth e exponha na pagina:
+
+- `window.VALIDA_IFC_AI_AUTH_URL`: URL de login.
+- `window.VALIDA_IFC_AI_ENDPOINT`: endpoint que recebe `{ text, criteria }` e retorna os criterios selecionados.
+
+Sem esse backend, o botao usa a interpretacao local por palavras-chave.
 
 ## Estrutura
 
