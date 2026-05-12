@@ -15,6 +15,7 @@ Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 - Permite validar por criterio digitado com interpretacao local por palavras-chave.
 - Calcula resultado por criterio e media final ponderada.
 - Colore o modelo conforme o criterio selecionado.
+- Inclui criterio local para localizar `IfcWindow` com altura menor que 50cm.
 
 ## IA e login
 
