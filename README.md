@@ -10,6 +10,7 @@ Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 - Mostra progresso de carregamento.
 - Renderiza geometria IFC real usando `three` e `web-ifc`, sem upload do IFC para servidor.
 - Permite orbit, pan, zoom, enquadrar e clique nos objetos.
+- Inclui duas paginas comparativas de viewer para avaliacao: That Open Components e xeokit SDK.
 - Permite selecionar multiplos criterios de auditoria.
 - Permite solicitar verificacoes em linguagem natural com interpretacao local.
 - Calcula resultado por criterio e media final ponderada.
@@ -33,6 +34,8 @@ Sem esse backend, o botao usa a interpretacao local por palavras-chave.
 ## Estrutura
 
 - `index.html`: aplicacao completa, com CSS e JavaScript embutidos.
+- `viewer-thatopen.html`: viewer experimental com That Open Components, Fragments e `web-ifc`.
+- `viewer-xeokit.html`: viewer experimental com xeokit SDK e `WebIFCLoaderPlugin`.
 - `docs/`: exemplos de matriz/criterios.
 - `scripts/serve-local.mjs`: servidor local simples para teste.
 - `scripts/sync-to-cloud.ps1`: sincroniza alteracoes locais com o GitHub.

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viewer IFC - xeokit</title>
+  <link rel="icon" href="data:," />
+  <style>
+    :root{--bg:#edf3f8;--surface:#fff;--panel:#f7fbff;--ink:#172232;--muted:#687689;--primary:#2754d8;--accent:#0f8f83;--border:#d7e0ec;--shadow:0 14px 34px rgba(23,34,50,.08)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif}header{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 22px;background:#fff;border-bottom:1px solid var(--border)}.brand{font-weight:900}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav a{padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:#fff;color:#183d9b;text-decoration:none;font-weight:800}main{padding:18px;display:grid;grid-template-columns:340px minmax(0,1fr);gap:16px;min-height:calc(100vh - 64px)}.panel{padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:var(--shadow);min-width:0}.stack{display:grid;gap:12px}.drop{position:relative;min-height:150px;display:grid;place-items:center;border:2px dashed #95add7;border-radius:10px;background:var(--panel);text-align:center}.drop input{position:absolute;inset:0;opacity:0;cursor:pointer}.drop strong{display:block;font-size:1.08rem}.drop span{display:block;margin-top:6px;color:var(--muted)}.button{border:1px solid transparent;border-radius:8px;padding:10px 12px;font-weight:800;cursor:pointer;background:#e8eefb;color:#183d9b}.button.primary{background:var(--primary);color:#fff}.button:disabled{opacity:.55;cursor:not-allowed}.status{padding:12px;border:1px solid var(--border);border-radius:8px;background:var(--panel);color:var(--muted);line-height:1.45}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.viewer-shell{padding:0;overflow:hidden;display:grid;grid-template-rows:auto 1fr auto}.viewer-head{padding:14px 16px;border-bottom:1px solid var(--border);background:#fff}.viewer-head h1{margin:0;font-size:1.25rem}.viewer-head p{margin:5px 0 0;color:var(--muted)}.canvas-wrap{position:relative;min-height:620px;background:#f3f8fc}#xeokitCanvas{position:absolute;inset:0;width:100%;height:100%;display:block}.empty{position:absolute;inset:0;z-index:2;display:grid;place-items:center;padding:16px;text-align:center;color:var(--muted);background:rgba(243,248,252,.92)}.selection{margin:0;padding:11px 16px;border-top:1px solid var(--border);background:#fff;color:var(--muted)}.facts{display:grid;gap:8px}.fact{padding:10px;border:1px solid var(--border);border-radius:8px;background:var(--panel)}.fact strong{display:block;font-size:.82rem;color:var(--muted);margin-bottom:4px}@media(max-width:980px){main{grid-template-columns:1fr}.canvas-wrap{min-height:480px}}@media(max-width:560px){header{height:auto;align-items:flex-start;flex-direction:column;padding:14px 16px}main{padding:14px}.canvas-wrap{min-height:400px}}
+  </style>
+</head>
+<body>
+<header>
+  <div><div class="brand">Valida IFC - xeokit SDK</div><div class="nav"><a href="index.html">Auditoria</a><a href="viewer-thatopen.html">Viewer That Open</a></div></div>
+</header>
+<main>
+  <aside class="panel stack">
+    <div>
+      <h2>Viewer xeokit</h2>
+      <p class="status">Versao de teste com `WebIFCLoaderPlugin`, indicada pelo SDK para IFC pequeno e medio carregado no navegador.</p>
+    </div>
+    <label class="drop">
+      <input id="file" type="file" accept=".ifc" />
+      <span><strong>Arraste ou selecione um IFC</strong><span>Carregamento local no navegador.</span></span>
+    </label>
+    <div class="toolbar">
+      <button id="fit" class="button primary" type="button" disabled>Enquadrar</button>
+      <button id="reset" class="button" type="button" disabled>Limpar</button>
+    </div>
+    <div id="status" class="status">Aguardando arquivo IFC.</div>
+    <div class="facts">
+      <div class="fact"><strong>Motor</strong><span>xeokit SDK + WebIFCLoaderPlugin</span></div>
+      <div class="fact"><strong>Entrada</strong><span>IFC local via Object URL</span></div>
+      <div class="fact"><strong>Interacao</strong><span>Orbit/pan/zoom do viewer e picking de entidades</span></div>
+    </div>
+  </aside>
+  <section class="panel viewer-shell">
+    <div class="viewer-head">
+      <h1>Visualizacao IFC</h1>
+      <p>Comparativo dedicado para decidir se o viewer xeokit deve assumir o papel principal.</p>
+    </div>
+    <div class="canvas-wrap"><canvas id="xeokitCanvas"></canvas><div id="empty" class="empty">Carregue um IFC para visualizar com xeokit.</div></div>
+    <p id="selection" class="selection">Nenhum objeto selecionado.</p>
+  </section>
+</main>
+<script type="module">
+import {Viewer,WebIFCLoaderPlugin} from "https://cdn.jsdelivr.net/npm/@xeokit/xeokit-sdk@2.6.109/dist/xeokit-sdk.es.js";
+import * as WebIFC from "https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/web-ifc-api.js";
+
+const file=document.querySelector("#file"),status=document.querySelector("#status"),empty=document.querySelector("#empty"),selection=document.querySelector("#selection"),fitButton=document.querySelector("#fit"),resetButton=document.querySelector("#reset");
+const viewer=new Viewer({canvasId:"xeokitCanvas",transparent:true});
+viewer.scene.xrayMaterial.fillAlpha=.25;
+viewer.scene.highlightMaterial.fillAlpha=.45;
+viewer.camera.eye=[14,10,14];
+viewer.camera.look=[0,0,0];
+viewer.camera.up=[0,1,0];
+const IfcAPI=new WebIFC.IfcAPI();
+IfcAPI.SetWasmPath("https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/");
+await IfcAPI.Init();
+const loader=new WebIFCLoaderPlugin(viewer,{WebIFC,IfcAPI,objectDefaults:{IfcSpace:{visible:false},IfcWindow:{opacity:.45}}});
+let model=null;
+function setStatus(text){status.textContent=text}
+function fitModel(){if(model)viewer.cameraFlight.flyTo(model)}
+function clearModel(){if(model){model.destroy();model=null}empty.hidden=false;selection.textContent="Nenhum objeto selecionado.";fitButton.disabled=true;resetButton.disabled=true}
+async function loadIfc(selected){clearModel();setStatus(`Carregando ${selected.name} com xeokit...`);const ifc=new Uint8Array(await selected.arrayBuffer());model=loader.load({id:`local-${Date.now()}`,ifc,edges:true,excludeTypes:["IfcSpace"]});model.on("loaded",()=>{empty.hidden=true;fitButton.disabled=false;resetButton.disabled=false;fitModel();setStatus(`${selected.name} carregado com xeokit.`)});model.on("error",message=>{console.error(message);setStatus(`Falha ao carregar o IFC: ${message}`)})}
+file.addEventListener("change",async event=>{const selected=event.target.files?.[0];if(selected)await loadIfc(selected)});
+fitButton.addEventListener("click",fitModel);
+resetButton.addEventListener("click",()=>{clearModel();file.value="";setStatus("Aguardando arquivo IFC.")});
+viewer.scene.input.on("mouseclicked",coords=>{const hit=viewer.scene.pick({canvasPos:coords});if(!hit){selection.textContent="Nenhum objeto selecionado.";return}selection.textContent=`Objeto selecionado: ${hit.entity?.id||"sem id"}`});
+</script>
+</body>
+</html>
