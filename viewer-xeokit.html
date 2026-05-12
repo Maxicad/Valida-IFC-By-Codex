@@ -51,6 +51,14 @@ const file=document.querySelector("#file"),status=document.querySelector("#statu
 const viewer=new Viewer({canvasId:"xeokitCanvas",transparent:true});
 viewer.scene.xrayMaterial.fillAlpha=.25;
 viewer.scene.highlightMaterial.fillAlpha=.45;
+viewer.scene.selectedMaterial.fill=true;
+viewer.scene.selectedMaterial.fillColor=[0.0,0.32,1.0];
+viewer.scene.selectedMaterial.fillAlpha=.85;
+viewer.scene.selectedMaterial.edges=true;
+viewer.scene.selectedMaterial.edgeColor=[0.0,0.12,0.8];
+viewer.scene.selectedMaterial.edgeAlpha=1;
+viewer.scene.selectedMaterial.edgeWidth=2;
+viewer.scene.selectedMaterial.glowThrough=false;
 viewer.camera.eye=[14,10,14];
 viewer.camera.look=[0,0,0];
 viewer.camera.up=[0,1,0];
@@ -58,15 +66,17 @@ const IfcAPI=new WebIFC.IfcAPI();
 IfcAPI.SetWasmPath("https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/");
 await IfcAPI.Init();
 const loader=new WebIFCLoaderPlugin(viewer,{WebIFC,IfcAPI,objectDefaults:{IfcSpace:{visible:false},IfcWindow:{opacity:.45}}});
-let model=null;
+let model=null,selectedObjectId=null;
 function setStatus(text){status.textContent=text}
 function fitModel(){if(model)viewer.cameraFlight.flyTo(model)}
-function clearModel(){if(model){model.destroy();model=null}empty.hidden=false;selection.textContent="Nenhum objeto selecionado.";fitButton.disabled=true;resetButton.disabled=true}
+function clearSelection(){if(selectedObjectId){viewer.scene.setObjectsSelected([selectedObjectId],false);selectedObjectId=null}selection.textContent="Nenhum objeto selecionado."}
+function selectEntity(entity){clearSelection();if(!entity?.id)return;selectedObjectId=entity.id;viewer.scene.setObjectsSelected([selectedObjectId],true);selection.textContent=`Objeto selecionado: ${selectedObjectId}`}
+function clearModel(){clearSelection();if(model){model.destroy();model=null}empty.hidden=false;fitButton.disabled=true;resetButton.disabled=true}
 async function loadIfc(selected){clearModel();setStatus(`Carregando ${selected.name} com xeokit...`);const ifc=new Uint8Array(await selected.arrayBuffer());model=loader.load({id:`local-${Date.now()}`,ifc,edges:true,excludeTypes:["IfcSpace"]});model.on("loaded",()=>{empty.hidden=true;fitButton.disabled=false;resetButton.disabled=false;fitModel();setStatus(`${selected.name} carregado com xeokit.`)});model.on("error",message=>{console.error(message);setStatus(`Falha ao carregar o IFC: ${message}`)})}
 file.addEventListener("change",async event=>{const selected=event.target.files?.[0];if(selected)await loadIfc(selected)});
 fitButton.addEventListener("click",fitModel);
 resetButton.addEventListener("click",()=>{clearModel();file.value="";setStatus("Aguardando arquivo IFC.")});
-viewer.scene.input.on("mouseclicked",coords=>{const hit=viewer.scene.pick({canvasPos:coords});if(!hit){selection.textContent="Nenhum objeto selecionado.";return}selection.textContent=`Objeto selecionado: ${hit.entity?.id||"sem id"}`});
+viewer.scene.input.on("mouseclicked",coords=>{const hit=viewer.scene.pick({canvasPos:coords,pickSurface:true});if(!hit?.entity){clearSelection();return}selectEntity(hit.entity)});
 </script>
 </body>
 </html>
