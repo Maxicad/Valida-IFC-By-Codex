@@ -24,6 +24,12 @@ O GitHub Pages e estatico, entao nao deve guardar chave de API ou token ChatGPT 
 
 Sem esse backend, o botao usa a interpretacao local por palavras-chave.
 
+## A fazer
+
+- Adicionar backend/conector autenticado para usar LLMs com login do usuario.
+- Implementar fluxo seguro de autenticacao para ChatGPT/LLM sem expor chave de API ou token no HTML estatico.
+- Conectar a solicitacao em linguagem natural ao backend quando o viewer, upload e criterios estiverem estaveis.
+
 ## Estrutura
 
 - `index.html`: aplicacao completa, com CSS e JavaScript embutidos.
