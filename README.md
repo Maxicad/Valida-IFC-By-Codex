@@ -7,6 +7,7 @@ Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 ## O que faz
 
 - Carrega um ou mais arquivos `.ifc`.
+- Executa pre-check antes do processamento, validando extensao, tamanho, cabecalho IFC e `FILE_SCHEMA`.
 - Mostra progresso de carregamento.
 - Exibe o schema IFC detectado no arquivo, como `IFC2x3`, `IFC4` ou `IFC4.3`.
 - Renderiza geometria IFC real usando `xeokit SDK` e `web-ifc`, sem upload do IFC para servidor.
