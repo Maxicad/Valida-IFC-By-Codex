@@ -10,7 +10,6 @@ Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 - Mostra progresso de carregamento.
 - Renderiza geometria IFC real usando `xeokit SDK` e `web-ifc`, sem upload do IFC para servidor.
 - Permite orbit, pan, zoom, enquadrar e clique nos objetos, com selecao azul no item clicado.
-- Inclui duas paginas comparativas de viewer para avaliacao: That Open Components e xeokit SDK.
 - Permite selecionar multiplos criterios de auditoria.
 - Permite validar por criterio digitado com interpretacao local por palavras-chave.
 - Relaciona qualquer criterio digitado em uma lista de verificacao chamada **Criterios customizados**, com ativar/desativar.
@@ -33,11 +32,15 @@ O uso de LLM/ChatGPT foi removido da interface de teste por enquanto. O campo de
 ## Estrutura
 
 - `index.html`: aplicacao completa, com viewer principal em xeokit, CSS e JavaScript embutidos.
-- `viewer-thatopen.html`: viewer experimental com That Open Components, Fragments e `web-ifc`.
-- `viewer-xeokit.html`: viewer experimental com xeokit SDK e `WebIFCLoaderPlugin`.
 - `docs/`: exemplos de matriz/criterios.
 - `scripts/serve-local.mjs`: servidor local simples para teste.
 - `scripts/sync-to-cloud.ps1`: sincroniza alteracoes locais com o GitHub.
+
+## Linguagens
+
+- HTML, CSS e JavaScript no frontend estatico.
+- JavaScript/Node.js no servidor local de teste.
+- PowerShell no script de sincronizacao local com GitHub.
 
 ## Lista de criterios em Excel
 
