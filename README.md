@@ -18,6 +18,7 @@ Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 - Desabilita a edicao dos criterios padrao quando houver criterios customizados na lista.
 - Carrega lista de criterios customizados a partir de Excel (`.xlsx`, `.xls`) ou CSV.
 - Calcula resultado por criterio e media final ponderada.
+- Classifica os resultados como `Error`, `Warning`, `Requirement Failure` e `Info`, com rotulos ajustados ao idioma do navegador.
 - Colore o modelo conforme o criterio selecionado.
 - Inclui criterio local para localizar `IfcWindow` com altura menor que 50cm.
 
