@@ -8,6 +8,7 @@ Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 
 - Carrega um ou mais arquivos `.ifc`.
 - Mostra progresso de carregamento.
+- Exibe o schema IFC detectado no arquivo, como `IFC2x3`, `IFC4` ou `IFC4.3`.
 - Renderiza geometria IFC real usando `xeokit SDK` e `web-ifc`, sem upload do IFC para servidor.
 - Permite orbit, pan, zoom, enquadrar e clique nos objetos, com selecao azul no item clicado.
 - Permite selecionar multiplos criterios de auditoria.
