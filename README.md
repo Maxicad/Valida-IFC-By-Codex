@@ -13,7 +13,9 @@ Site: https://maxicad.github.io/Valida-IFC-By-Codex/
 - Inclui duas paginas comparativas de viewer para avaliacao: That Open Components e xeokit SDK.
 - Permite selecionar multiplos criterios de auditoria.
 - Permite validar por criterio digitado com interpretacao local por palavras-chave.
-- Relaciona qualquer criterio digitado em uma lista de verificacao chamada **Critérios customizados**, com ativar/desativar.
+- Relaciona qualquer criterio digitado em uma lista de verificacao chamada **Criterios customizados**, com ativar/desativar.
+- Desabilita a edicao dos criterios padrao quando houver criterios customizados na lista.
+- Carrega lista de criterios customizados a partir de Excel (`.xlsx`, `.xls`) ou CSV.
 - Calcula resultado por criterio e media final ponderada.
 - Colore o modelo conforme o criterio selecionado.
 - Inclui criterio local para localizar `IfcWindow` com altura menor que 50cm.
@@ -36,6 +38,10 @@ O uso de LLM/ChatGPT foi removido da interface de teste por enquanto. O campo de
 - `docs/`: exemplos de matriz/criterios.
 - `scripts/serve-local.mjs`: servidor local simples para teste.
 - `scripts/sync-to-cloud.ps1`: sincroniza alteracoes locais com o GitHub.
+
+## Lista de criterios em Excel
+
+Use uma planilha com uma coluna chamada `criterio`, `descricao`, `nome`, `titulo`, `criterion` ou `description`. Se esses cabecalhos nao existirem, o app usa a primeira celula preenchida de cada linha da primeira aba.
 
 ## Teste Local
 
