@@ -5,12 +5,44 @@
   --brand-accent:#00b36a;
   --muted:#6c757d;
 }
-body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+
+/* Base */
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;margin:0;padding:0;background:#fff;color:#111}
 .bg-brand{background:linear-gradient(90deg,var(--brand-dark),var(--brand));}
 .brand-mark{
   width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand-accent));
   display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;
 }
-.hero{background:linear-gradient(180deg,rgba(0,102,204,0.04),rgba(0,0,0,0));}
-.card{border:none;}
-footer a{color:inherit;text-decoration:underline;}
+.hero{background:linear-gradient(180deg,rgba(0,102,204,0.04),rgba(0,0,0,0));padding-top:2.5rem;padding-bottom:2.5rem}
+.preview-img{max-height:320px;width:100%;height:auto;object-fit:contain}
+.card{border:none}
+footer a{color:inherit;text-decoration:underline}
+
+/* Layout tweaks */
+.card .card-body{padding:1.5rem}
+pre{white-space:pre-wrap}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px){
+  .brand-mark{width:36px;height:36px;font-size:14px}
+  .hero{padding-top:2rem;padding-bottom:2rem}
+}
+
+@media (max-width: 767.98px){
+  .brand-mark{width:32px;height:32px;font-size:13px}
+  .hero{padding-top:1.5rem;padding-bottom:1.5rem}
+  .display-5{font-size:1.5rem}
+  .lead{font-size:1rem}
+  .preview-img{max-height:220px}
+  .card .card-body{padding:1rem}
+  .navbar .navbar-brand .ms-2{display:none}
+  .container{padding-left:1rem;padding-right:1rem}
+  footer .container{padding-left:1rem;padding-right:1rem}
+}
+
+/* Small devices: stack cards nicely */
+@media (max-width: 575.98px){
+  .display-5{font-size:1.25rem}
+  .lead{font-size:0.95rem}
+  .preview-img{max-height:180px}
+}

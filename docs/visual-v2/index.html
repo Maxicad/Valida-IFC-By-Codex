@@ -10,11 +10,11 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-brand">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <a class="navbar-brand d-flex align-items-center" href="#" aria-label="MaxiCAD Valida IFC">
         <div class="brand-mark">MC</div>
-        <span class="ms-2">MaxiCAD <small class="text-muted">Valida IFC</small></span>
+        <span class="ms-2 d-none d-sm-inline">MaxiCAD <small class="text-muted">Valida IFC</small></span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
@@ -30,8 +30,8 @@
 
   <header class="hero bg-light text-dark py-5">
     <div class="container d-flex align-items-center">
-      <div class="row w-100">
-        <div class="col-md-6">
+      <div class="row w-100 gy-4 align-items-center">
+        <div class="col-md-6 order-2 order-md-1">
           <h1 class="display-5">Validação IFC rápida e integrável</h1>
           <p class="lead">Interface leve para validar arquivos IFC com foco em openBIM — visual moderno para testes e demonstrações.</p>
           <p>
@@ -39,8 +39,8 @@
             <a class="btn btn-outline-secondary btn-lg" href="#features">Ver funcionalidades</a>
           </p>
         </div>
-        <div class="col-md-6 text-center">
-          <img src="/docs/visual-v2/preview.svg" alt="Preview" class="img-fluid" style="max-height:320px;">
+        <div class="col-md-6 text-center order-1 order-md-2">
+          <img src="/docs/visual-v2/preview.svg" alt="Preview" class="img-fluid preview-img" />
         </div>
       </div>
     </div>
@@ -104,7 +104,7 @@ npm start
   </main>
 
   <footer class="py-4 bg-dark text-white">
-    <div class="container d-flex justify-content-between align-items-center">
+    <div class="container d-flex justify-content-between align-items-center flex-column flex-md-row gap-2">
       <div>© MaxiCAD — Valida IFC</div>
       <div><a class="text-white" href="https://github.com/Maxicad/Valida-IFC-By-Codex" target="_blank">Ver no GitHub</a></div>
     </div>
