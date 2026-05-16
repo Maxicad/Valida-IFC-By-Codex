@@ -1,6 +1,11 @@
 $ErrorActionPreference = 'Stop'
 
-$repo = Split-Path -Parent $PSScriptRoot
+$repo = 'C:\MaxiCAD_Projetos_IA\01_Maxi_IFC_Codex'
+
+if (-not (Test-Path -LiteralPath $repo)) {
+  throw "Pasta do projeto nao encontrada: $repo"
+}
+
 Set-Location $repo
 
 git fetch origin main
