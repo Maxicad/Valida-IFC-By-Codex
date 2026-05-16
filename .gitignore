@@ -8,3 +8,4 @@ Thumbs.db
 .env
 .env.*
 .git.invalid-backup-*/
+data/validation-history.json

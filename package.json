@@ -5,6 +5,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "node scripts/serve-local.mjs"
+    "start": "node scripts/serve-local.mjs",
+    "api": "node scripts/backend-api.mjs"
   }
 }
