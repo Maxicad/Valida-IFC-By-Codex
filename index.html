@@ -12,6 +12,9 @@
   <style>#viewer{overscroll-behavior:contain;touch-action:none}#viewer canvas{overscroll-behavior:contain}</style>
   <style>.custom-criteria{margin-top:12px;border-top:1px solid var(--border);padding-top:10px}.custom-criteria h4{margin:0 0 8px;font-size:.92rem}.custom-list{display:grid;gap:8px}.custom-item{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:start;padding:9px;border:1px solid var(--border);border-radius:8px;background:#fff}.custom-item input{margin-top:3px}.custom-item strong{display:block;font-size:.86rem}.custom-item small{display:block;margin-top:3px;color:var(--muted);line-height:1.3}.custom-empty{padding:9px;border:1px dashed var(--border);border-radius:8px;color:var(--muted);font-size:.86rem;background:#fff}.criteria-grid.is-disabled .criterion{opacity:.62}.criteria-grid.is-disabled .criterion input{cursor:not-allowed}</style>
   <style>.export-actions{display:flex;gap:8px;flex-wrap:wrap}.executive-summary{margin-top:12px;border:1px solid var(--border);border-radius:8px;background:var(--panel);padding:12px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.summary-item{min-width:0}.summary-item strong{display:block;font-size:.76rem;text-transform:uppercase;color:var(--muted);margin-bottom:4px}.summary-item span{display:block;font-weight:800;overflow-wrap:anywhere}@media(max-width:900px){.executive-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.executive-summary{grid-template-columns:1fr}}</style>
+  <style>
+    body{background:#f3f6fa}.top{max-width:1220px}.pill{border-radius:8px}.onboarding-shell{max-width:1220px;padding:20px clamp(14px,3vw,30px) 48px}.intro-strip{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,420px);gap:20px;align-items:end;margin-bottom:16px}.intro-copy h1{margin:4px 0 8px;font-size:clamp(1.6rem,3vw,2.35rem);line-height:1.05}.intro-copy p{margin:0;color:var(--muted);line-height:1.5;max-width:760px}.eyebrow{margin:0;color:#0f6f67;font-size:.76rem;font-weight:900;text-transform:uppercase;letter-spacing:0}.status-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.status-metric{min-width:0;border:1px solid var(--border);border-radius:8px;background:#fff;padding:12px}.status-metric span{display:block;color:var(--muted);font-size:.73rem;font-weight:900;text-transform:uppercase}.status-metric strong{display:block;margin-top:5px;color:var(--ink);font-size:1.15rem;overflow-wrap:anywhere}.onboard-steps{position:sticky;top:0;z-index:5;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 14px;padding:8px;background:rgba(243,246,250,.94);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:10px}.onboard-step{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:center;text-decoration:none;color:var(--ink);border:1px solid transparent;border-radius:8px;padding:9px 10px;background:#fff}.onboard-step span{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#e8eefb;color:#183d9b;font-weight:900}.onboard-step strong,.onboard-step small{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.onboard-step small{margin-top:2px;color:var(--muted);font-size:.74rem}.onboard-step.is-active{border-color:#95add7;background:#f8fbff}.onboard-step.is-complete span{background:#0f8f83;color:#fff}.flow-stack{display:grid;gap:14px}.onboard-stage{border:1px solid var(--border);border-radius:10px;background:#fff;box-shadow:var(--shadow);overflow:hidden}.onboard-stage.is-locked{opacity:.74}.stage-header{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--border);background:#fff}.stage-index{display:grid;place-items:center;width:34px;height:34px;border-radius:8px;background:#e8eefb;color:#183d9b;font-weight:900;flex:0 0 auto}.stage-title{min-width:0;flex:1}.stage-title h2{margin:0;font-size:1.08rem}.stage-title p{margin:4px 0 0;color:var(--muted);line-height:1.4}.stage-state{border:1px solid var(--border);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:.78rem;font-weight:900;white-space:nowrap;background:var(--panel)}.onboard-stage.is-active .stage-state{border-color:#95add7;color:#183d9b;background:#edf5ff}.onboard-stage.is-complete .stage-state{border-color:rgba(15,143,131,.35);color:#0f6f67;background:#eefaf7}.stage-body{padding:16px 18px}.upload-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,380px);gap:14px}.criteria-layout{display:grid;grid-template-columns:minmax(300px,.75fr) minmax(0,1.25fr);gap:14px}.viewer-layout{display:grid;gap:12px}.results-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:14px}.flow-panel{border:1px solid var(--border);border-radius:8px;background:var(--panel);padding:12px;min-width:0}.flow-panel h3{margin:0 0 8px;font-size:.98rem}.drop{min-height:160px;background:#fff}.progress-card{background:#fff}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.card{min-height:76px;background:#fff}.executive-summary{background:#fff}.criteria-grid{max-height:520px}.viewer-panel{border-radius:8px}.viewer-top{padding:12px;border-bottom:1px solid var(--border)}.viewer{height:clamp(420px,54vh,680px)}.results-grid{display:block}.table-wrap{background:#fff}.file-section{margin-top:14px}.action-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.action-row .button.primary{min-width:180px}.quiet-note{margin:8px 0 0;color:var(--muted);font-size:.86rem;line-height:1.4}.export-actions .button{min-width:86px}@media(max-width:980px){.intro-strip,.upload-layout,.criteria-layout,.results-layout{grid-template-columns:1fr}.onboard-steps{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}.status-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.viewer{height:500px}}@media(max-width:620px){.onboarding-shell{padding-inline:12px}.onboard-steps,.status-metrics,.cards{grid-template-columns:1fr}.stage-header{align-items:flex-start}.stage-state{margin-left:auto}.viewer{height:400px}.panel-head{display:block}}
+  </style>
   <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.165.0/build/three.module.js","web-ifc":"https://cdn.jsdelivr.net/npm/web-ifc@0.0.59/web-ifc-api.js"}}</script>
 </head>
 <body>
@@ -24,76 +27,128 @@
     <div class="pill">Processamento no navegador</div>
   </div>
 </header>
-<main>
-  <section class="workspace">
-    <aside class="side-panel">
-      <section class="panel upload-stack">
-        <div class="panel-head">
-          <div>
-            <h2>Entrada</h2>
-            <p>Carregue IFCs e descreva o que deseja verificar.</p>
+<main class="onboarding-shell">
+  <section class="intro-strip">
+    <div class="intro-copy">
+      <p class="eyebrow">Fluxo guiado</p>
+      <h1>Auditoria IFC por etapas</h1>
+      <p>Comece carregando o IFC. Depois escolha os critérios, revise o modelo 3D e exporte ou salve o histórico da validação.</p>
+    </div>
+    <div class="status-metrics" aria-label="Resumo rápido">
+      <div class="status-metric"><span>Arquivos</span><strong id="kFiles">0</strong></div>
+      <div class="status-metric"><span>Schema</span><strong id="kSchema">-</strong></div>
+      <div class="status-metric"><span>Média</span><strong id="kScore">0%</strong></div>
+    </div>
+  </section>
+
+  <nav class="onboard-steps" aria-label="Etapas da auditoria">
+    <a class="onboard-step is-active" href="#step-upload" data-step-nav="upload"><span>1</span><div><strong>Carregar IFC</strong><small>Pre-check e leitura</small></div></a>
+    <a class="onboard-step" href="#step-criteria" data-step-nav="criteria"><span>2</span><div><strong>Critérios</strong><small>Regras e checklist</small></div></a>
+    <a class="onboard-step" href="#step-review" data-step-nav="review"><span>3</span><div><strong>Auditar</strong><small>Viewer e execução</small></div></a>
+    <a class="onboard-step" href="#step-results" data-step-nav="results"><span>4</span><div><strong>Resultados</strong><small>Relatório e histórico</small></div></a>
+  </nav>
+
+  <section class="flow-stack">
+    <section id="step-upload" class="onboard-stage is-active" data-onboard-step="upload">
+      <div class="stage-header">
+        <div class="stage-index">1</div>
+        <div class="stage-title"><h2>Carregar IFC</h2><p>O arquivo passa por pre-check antes de extrair dados e abrir a geometria.</p></div>
+        <span class="stage-state" data-stage-status="upload">Aguardando IFC</span>
+      </div>
+      <div class="stage-body upload-layout">
+        <div class="flow-panel">
+          <div id="drop" class="drop"><input id="file" type="file" accept=".ifc" multiple><div><h2>Arraste ou selecione IFCs</h2><p>Limite: 250 MB por arquivo.</p></div></div>
+          <div id="progressCard" class="progress-card" aria-live="polite">
+            <div class="status"><span id="progressText">Aguardando arquivo IFC.</span><span id="progressPct">0%</span></div>
+            <div class="track" aria-label="Progresso do carregamento"><div id="bar" class="bar"></div></div>
+            <div class="activity"><span class="spinner" aria-hidden="true"></span><span id="progressDetail">Selecione um arquivo para iniciar a leitura local.</span></div>
+            <div class="stage-list" aria-label="Etapas de processamento"><div class="stage" data-stage="precheck"><strong>Pre-check</strong><span>Extensão, tamanho e schema</span></div><div class="stage" data-stage="read"><strong>Leitura</strong><span>Arquivo no navegador</span></div><div class="stage" data-stage="inspect"><strong>Dados IFC</strong><span>Objetos e atributos</span></div><div class="stage" data-stage="geometry"><strong>Geometria 3D</strong><span>web-ifc / Three.js</span></div><div class="stage" data-stage="ready"><strong>Pronto</strong><span>Auditoria liberada</span></div></div>
+            <div id="fileLog" class="file-log"><div class="file-line"><span>Nenhum arquivo em processamento.</span><small>0 KB</small></div></div>
           </div>
         </div>
-        <div id="drop" class="drop"><input id="file" type="file" accept=".ifc" multiple><div><h2>Arraste ou selecione IFCs</h2><p>Pre-check local antes da análise. Limite: 250 MB por arquivo.</p></div></div>
+        <aside class="flow-panel">
+          <h3>Resumo do modelo</h3>
+          <div class="cards"><div class="card"><span id="kObjects" class="metric">0</span><small>objetos</small></div><div class="card"><span id="kWalls" class="metric">0</span><small>paredes</small></div><div class="card"><span id="kSelected" class="metric">0</span><small>critérios</small></div><div class="card"><span class="metric text">250 MB</span><small>limite por arquivo</small></div></div>
+          <div id="executiveSummary" class="executive-summary" aria-label="Resumo executivo"></div>
+        </aside>
+      </div>
+      <div class="stage-body file-section">
+        <div class="panel-head"><div><h3>Arquivos carregados</h3><p class="muted">Pre-check, schema e extração inicial aparecem aqui.</p></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Arquivo</th><th>Pre-check</th><th>Schema IFC</th><th>Tamanho</th><th>Objetos</th><th>Paredes</th><th>Projeto</th></tr></thead><tbody id="fileRows"><tr><td colspan="7">Sem dados.</td></tr></tbody></table></div>
+      </div>
+    </section>
+
+    <section id="step-criteria" class="onboard-stage is-locked" data-onboard-step="criteria">
+      <div class="stage-header">
+        <div class="stage-index">2</div>
+        <div class="stage-title"><h2>Escolher critérios</h2><p>Use critérios padrão, digite uma solicitação simples ou importe uma lista Excel.</p></div>
+        <span class="stage-state" data-stage-status="criteria">Depois do IFC</span>
+      </div>
+      <div class="stage-body criteria-layout">
         <section class="nl-panel">
-          <h3>Validação por critério digitado</h3>
+          <h3>Critério digitado</h3>
           <textarea id="naturalRequest" placeholder="Ex.: paredes com nível, nomenclatura do arquivo, Project Information, objetos duplicados."></textarea>
           <div class="nl-actions">
             <button id="interpretRequest" class="button primary" type="button">Validar critério digitado</button>
             <button id="loadCriteria" class="button" type="button">Carregar lista Excel</button>
             <input id="criteriaFile" type="file" accept=".xlsx,.xls,.csv" hidden>
           </div>
-          <p id="nlStatus" class="nl-status">Digite um critério ou pedido simples. A interpretação local seleciona os critérios por palavras-chave e executa a auditoria quando houver IFC carregado.</p>
+          <p id="nlStatus" class="nl-status">Digite um critério ou pedido simples. A interpretação local seleciona critérios por palavras-chave.</p>
           <div class="custom-criteria">
-            <h4>Lista de verificação - critérios customizados</h4>
+            <h4>Lista de verificação customizada</h4>
             <div id="customCriteriaList" class="custom-list"><div class="custom-empty">Nenhum critério digitado validado.</div></div>
           </div>
         </section>
-        <div id="progressCard" class="progress-card" aria-live="polite">
-          <div class="status"><span id="progressText">Aguardando arquivo IFC.</span><span id="progressPct">0%</span></div>
-          <div class="track" aria-label="Progresso do carregamento"><div id="bar" class="bar"></div></div>
-          <div class="activity"><span class="spinner" aria-hidden="true"></span><span id="progressDetail">Selecione um arquivo para iniciar a leitura local.</span></div>
-          <div class="stage-list" aria-label="Etapas de processamento"><div class="stage" data-stage="precheck"><strong>Pre-check</strong><span>Extensão, tamanho e schema</span></div><div class="stage" data-stage="read"><strong>Leitura</strong><span>Arquivo no navegador</span></div><div class="stage" data-stage="inspect"><strong>Dados IFC</strong><span>Objetos e atributos</span></div><div class="stage" data-stage="geometry"><strong>Geometria 3D</strong><span>web-ifc / Three.js</span></div><div class="stage" data-stage="ready"><strong>Pronto</strong><span>Auditoria liberada</span></div></div>
-          <div id="fileLog" class="file-log"><div class="file-line"><span>Nenhum arquivo em processamento.</span><small>0 KB</small></div></div>
-        </div>
-      </section>
-      <section class="panel">
-        <div class="panel-head"><div><h2>Critérios</h2><p>Selecione um ou mais itens para a auditoria.</p></div></div>
-        <div id="criteriaBox" class="criteria-grid"></div>
-        <div class="select-line"><label for="colorCriterion"><strong>Colorir modelo por critério</strong></label><select id="colorCriterion"></select></div>
-        <div class="audit-actions"><button id="audit" class="button primary" type="button" disabled>Executar auditoria</button></div>
-      </section>
-    </aside>
-    <section class="main-panel">
-      <section class="panel">
-        <div class="panel-head">
-          <div>
-            <h1>Auditoria IFC</h1>
-            <p>Resumo do modelo, visualização 3D e evidências por critério.</p>
+        <section class="flow-panel">
+          <h3>Critérios padrão</h3>
+          <div id="criteriaBox" class="criteria-grid"></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="step-review" class="onboard-stage is-locked" data-onboard-step="review">
+      <div class="stage-header">
+        <div class="stage-index">3</div>
+        <div class="stage-title"><h2>Auditar e revisar em 3D</h2><p>Execute a auditoria e use o viewer para entender onde estão as evidências.</p></div>
+        <span class="stage-state" data-stage-status="review">Aguardando critérios</span>
+      </div>
+      <div class="stage-body viewer-layout">
+        <div class="flow-panel">
+          <div class="action-row">
+            <button id="audit" class="button primary" type="button" disabled>Executar auditoria</button>
+            <div class="select-line"><label for="colorCriterion"><strong>Colorir por critério</strong></label><select id="colorCriterion"></select></div>
           </div>
+          <p class="quiet-note">Após executar, o modelo muda de cor conforme a severidade técnica do critério selecionado.</p>
         </div>
-        <div class="cards"><div class="card"><span id="kFiles" class="metric">0</span><small>arquivos</small></div><div class="card"><span id="kSchema" class="metric text">-</span><small>schema IFC</small></div><div class="card"><span id="kObjects" class="metric">0</span><small>objetos</small></div><div class="card"><span id="kWalls" class="metric">0</span><small>paredes</small></div><div class="card"><span id="kSelected" class="metric">0</span><small>critérios</small></div><div class="card"><span id="kScore" class="metric">0%</span><small>média ponderada</small></div></div>
-        <div id="executiveSummary" class="executive-summary" aria-label="Resumo executivo"></div>
-      </section>
-      <section class="panel viewer-panel">
-        <div class="viewer-top">
-          <div class="panel-head"><div><h2>Visualizador 3D IFC</h2><p>Use orbit, pan, zoom e clique nos objetos para inspecionar.</p></div></div>
-          <div class="viewer-tools"><button class="button active" data-mode="orbit">Orbit</button><button class="button" data-mode="pan">Pan</button><button class="button" id="zin">Zoom +</button><button class="button" id="zout">Zoom -</button><button class="button" id="fit">Enquadrar</button></div>
-          <div id="severityLegend" class="legend"></div>
-        </div>
-        <div id="viewer" class="viewer"><canvas id="mainCanvas"></canvas><div id="empty" class="empty">Carregue um IFC para gerar a geometria real auditável.</div></div>
-        <p id="selected" class="selected-line">Nenhum objeto selecionado.</p>
-      </section>
-      <section class="results-grid">
-        <section class="panel">
-          <div class="panel-head"><div><h2>Resultado por critério</h2><p id="summary" class="muted">Execute a auditoria para visualizar os níveis de aprovação.</p></div><div class="export-actions"><button id="exportJson" class="button" type="button">JSON</button><button id="exportCsv" class="button" type="button">CSV</button><button id="exportHtml" class="button" type="button">HTML</button><button id="saveHistory" class="button" type="button">Salvar histórico</button></div></div>
+        <section class="panel viewer-panel">
+          <div class="viewer-top">
+            <div class="panel-head"><div><h3>Visualizador IFC</h3><p>Use orbit, pan, zoom e clique nos objetos para inspecionar.</p></div></div>
+            <div class="viewer-tools"><button class="button active" data-mode="orbit">Orbit</button><button class="button" data-mode="pan">Pan</button><button class="button" id="zin">Zoom +</button><button class="button" id="zout">Zoom -</button><button class="button" id="fit">Enquadrar</button></div>
+            <div id="severityLegend" class="legend"></div>
+          </div>
+          <div id="viewer" class="viewer"><canvas id="mainCanvas"></canvas><div id="empty" class="empty">Carregue um IFC para gerar a geometria real auditável.</div></div>
+          <p id="selected" class="selected-line">Nenhum objeto selecionado.</p>
+        </section>
+      </div>
+    </section>
+
+    <section id="step-results" class="onboard-stage is-locked" data-onboard-step="results">
+      <div class="stage-header">
+        <div class="stage-index">4</div>
+        <div class="stage-title"><h2>Resultados e relatório</h2><p>Revise a severidade técnica, exporte o relatório ou salve o histórico local.</p></div>
+        <span class="stage-state" data-stage-status="results">Aguardando auditoria</span>
+      </div>
+      <div class="stage-body results-layout">
+        <section class="flow-panel">
+          <div class="panel-head"><div><h3>Resultado por critério</h3><p id="summary" class="muted">Execute a auditoria para visualizar os níveis de aprovação.</p></div></div>
           <div class="table-wrap"><table><thead><tr><th>Critério</th><th>Severidade técnica</th><th>Aprovação</th><th>Peso</th><th>Evidência</th></tr></thead><tbody id="criteriaRows"><tr><td colspan="5">Sem dados.</td></tr></tbody></table></div>
         </section>
-        <section class="panel">
-          <div class="panel-head"><div><h2>Arquivos</h2><p class="muted">Resumo dos IFCs carregados.</p></div></div>
-          <div class="table-wrap"><table><thead><tr><th>Arquivo</th><th>Pre-check</th><th>Schema IFC</th><th>Tamanho</th><th>Objetos</th><th>Paredes</th><th>Projeto</th></tr></thead><tbody id="fileRows"><tr><td colspan="7">Sem dados.</td></tr></tbody></table></div>
-        </section>
-      </section>
+        <aside class="flow-panel">
+          <h3>Exportar</h3>
+          <div class="export-actions"><button id="exportJson" class="button" type="button">JSON</button><button id="exportCsv" class="button" type="button">CSV</button><button id="exportHtml" class="button" type="button">HTML</button><button id="saveHistory" class="button" type="button">Salvar histórico</button></div>
+          <p class="quiet-note">O histórico usa a API local. Para salvar, mantenha o backend ativo em localhost:4174.</p>
+        </aside>
+      </div>
     </section>
   </section>
 </main>
@@ -175,7 +230,8 @@ function downloadReport(name,type,content){const blob=new Blob([content],{type})
 function exportReport(format){const data=reportData(),stamp=new Date().toISOString().slice(0,19).replace(/[:T]/g,'-');if(format==='json'){downloadReport(`relatorio-ifc-${stamp}.json`,'application/json;charset=utf-8',JSON.stringify(data,null,2));return}if(format==='csv'){const rows=[['tipo','item','severidade','score','ok','total','peso','evidencia'],...data.criteria.map(r=>['criterio',r.label,r.severity,r.score??'N/A',r.ok,r.total,r.weight,r.evidence]),...data.files.map(f=>['arquivo',f.name,f.precheck,'',f.objects,'',f.sizeLabel,`Schema: ${f.schema}; Projeto: ${f.project}`])];downloadReport(`relatorio-ifc-${stamp}.csv`,'text/csv;charset=utf-8',rows.map(row=>row.map(csvCell).join(';')).join('\n'));return}const html=`<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Relatório IFC</title><style>body{font-family:Arial,sans-serif;color:#172232;margin:32px}table{border-collapse:collapse;width:100%;margin-top:16px}th,td{border:1px solid #d7e0ec;padding:8px;text-align:left}th{background:#f8fbff}.metric{display:inline-block;margin:0 16px 12px 0}</style><h1>Relatório IFC</h1><p>Gerado em ${esc(new Date(data.generatedAt).toLocaleString('pt-BR'))}</p><h2>Resumo executivo</h2><p><span class="metric"><strong>Arquivos:</strong> ${data.summary.files}</span><span class="metric"><strong>Tamanho:</strong> ${bytes(data.summary.totalSize)}</span><span class="metric"><strong>Schema:</strong> ${esc(data.summary.schema)}</span><span class="metric"><strong>Objetos:</strong> ${data.summary.objects}</span><span class="metric"><strong>Erros:</strong> ${data.summary.severity.error}</span><span class="metric"><strong>Avisos:</strong> ${data.summary.severity.warning}</span><span class="metric"><strong>Falhas:</strong> ${data.summary.severity.requirement}</span></p><h2>Critérios</h2><table><thead><tr><th>Critério</th><th>Severidade</th><th>Aprovação</th><th>Evidência</th></tr></thead><tbody>${data.criteria.map(r=>`<tr><td>${esc(r.label)}</td><td>${esc(r.severity)}</td><td>${r.score==null?'N/A':`${r.score}% (${r.ok}/${r.total})`}</td><td>${esc(r.evidence)}</td></tr>`).join('')}</tbody></table><h2>Arquivos</h2><table><thead><tr><th>Arquivo</th><th>Pre-check</th><th>Schema</th><th>Tamanho</th><th>Objetos</th><th>Projeto</th></tr></thead><tbody>${data.files.map(f=>`<tr><td>${esc(f.name)}</td><td>${esc(f.precheck)}</td><td>${esc(f.schema)}</td><td>${esc(f.sizeLabel)}</td><td>${f.objects}</td><td>${esc(f.project)}</td></tr>`).join('')}</tbody></table></html>`;downloadReport(`relatorio-ifc-${stamp}.html`,'text/html;charset=utf-8',html)}
 async function saveValidationHistory(){const data=reportData();if(!data.files.length){el.nlStatus.textContent='Carregue um IFC antes de salvar o histórico.';return}try{el.saveHistory.disabled=true;el.nlStatus.textContent='Salvando histórico da validação...';const projectName=data.files.map(f=>f.project).find(name=>name&&name!=='Não identificado')||'Projeto sem nome';const response=await fetch(`${API_BASE}/api/validations`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({projectId:'default',projectName,report:data})});const result=await response.json();if(!response.ok||!result.ok)throw new Error(result.message||result.detail||'Falha ao salvar histórico.');el.nlStatus.textContent=`Histórico salvo com sucesso. ID: ${result.validation.id}.`}catch(e){el.nlStatus.textContent=`Não foi possível salvar o histórico. Verifique se o backend está ativo em ${API_BASE}. ${e.message||e}`}finally{el.saveHistory.disabled=false}}
 function renderExecutiveSummary(){const data=reportData(),s=data.summary,c=s.severity;el.executiveSummary.innerHTML=`<div class="summary-item"><strong>Arquivo</strong><span>${s.files?`${s.files} arquivo(s)`:'Nenhum arquivo'}</span></div><div class="summary-item"><strong>Tamanho</strong><span>${bytes(s.totalSize)}</span></div><div class="summary-item"><strong>Schema</strong><span>${esc(s.schema)}</span></div><div class="summary-item"><strong>Objetos</strong><span>${s.objects}</span></div><div class="summary-item"><strong>Erros</strong><span>${c.error}</span></div><div class="summary-item"><strong>Avisos</strong><span>${c.warning}</span></div><div class="summary-item"><strong>Falhas</strong><span>${c.requirement}</span></div><div class="summary-item"><strong>Informações</strong><span>${c.info}</span></div>`}
-function render(){const selected=CRITERIA.filter(c=>state.selectedCriteria.has(c.id));el.kFiles.textContent=state.files.length;el.kSchema.textContent=schemaSummary();el.kObjects.textContent=state.objects.length;el.kWalls.textContent=state.objects.filter(o=>o.entity==='IFCWALL'||o.entity==='IFCWALLSTANDARDCASE').length;el.kSelected.textContent=selected.length;el.kScore.textContent=state.audit?(state.audit.finalScore!=null?`${state.audit.finalScore}%`:'N/A'):'0%';el.summary.innerHTML=state.audit?`${i18n.summary}: <span class="badge ${state.audit.level.key}">${state.audit.level.label}</span> ${state.audit.finalScore!=null?`${state.audit.finalScore}%.`:'sem itens aplicáveis.'} ${i18n.scale}`:'Execute a auditoria para visualizar os níveis de aprovação.';el.criteriaRows.innerHTML=state.audit?state.audit.results.map(r=>{const c=CRITERIA.find(x=>x.id===r.criterion),approval=r.score==null?'N/A':`${r.score}% (${r.ok}/${r.total})`;return`<tr><td>${esc(c.label)}</td><td><span class="badge ${r.level.key}">${r.level.label}</span></td><td>${approval}</td><td>${r.weight}</td><td>${esc(r.evidence)}</td></tr>`}).join(''):'<tr><td colspan="5">Sem dados.</td></tr>';el.fileRows.innerHTML=state.fileSummaries.length?state.fileSummaries.map(f=>`<tr><td>${esc(f.name)}</td><td>${esc(f.precheck||'Aprovado')}</td><td>${esc(f.schema||'Não identificado')}</td><td>${bytes(f.size)}</td><td>${(f.objects||[]).length}</td><td>${(f.walls||[]).length}</td><td>${esc(f.projectName||'Não identificado')}</td></tr>`).join(''):'<tr><td colspan="7">Sem dados.</td></tr>';renderExecutiveSummary()}
+function updateOnboarding(){const hasFiles=state.fileSummaries.length>0,hasApproved=state.files.length>0,hasCriteria=state.selectedCriteria.size>0,hasAudit=!!state.audit;const steps={upload:{active:state.loading||!hasFiles,complete:hasFiles,locked:false,status:state.loading?'Processando':hasFiles?'IFC carregado':'Aguardando IFC'},criteria:{active:hasApproved&&!hasCriteria,complete:hasCriteria,locked:!hasApproved,status:hasCriteria?'Critérios definidos':hasApproved?'Escolha os critérios':'Depois do IFC'},review:{active:hasApproved&&hasCriteria&&!hasAudit,complete:hasAudit,locked:!hasApproved||!hasCriteria,status:hasAudit?'Auditoria feita':hasApproved&&hasCriteria?'Pronto para auditar':'Aguardando critérios'},results:{active:hasAudit,complete:hasAudit,locked:!hasAudit,status:hasAudit?'Relatório pronto':'Aguardando auditoria'}};Object.entries(steps).forEach(([id,step])=>{document.querySelectorAll(`[data-onboard-step="${id}"],[data-step-nav="${id}"]`).forEach(node=>{node.classList.toggle('is-active',step.active);node.classList.toggle('is-complete',step.complete);node.classList.toggle('is-locked',step.locked)});const status=document.querySelector(`[data-stage-status="${id}"]`);if(status)status.textContent=step.status});document.body.dataset.flow=hasAudit?'results':hasCriteria?'review':hasApproved?'criteria':'upload'}
+function render(){const selected=CRITERIA.filter(c=>state.selectedCriteria.has(c.id));el.kFiles.textContent=state.files.length;el.kSchema.textContent=schemaSummary();el.kObjects.textContent=state.objects.length;el.kWalls.textContent=state.objects.filter(o=>o.entity==='IFCWALL'||o.entity==='IFCWALLSTANDARDCASE').length;el.kSelected.textContent=selected.length;el.kScore.textContent=state.audit?(state.audit.finalScore!=null?`${state.audit.finalScore}%`:'N/A'):'0%';el.summary.innerHTML=state.audit?`${i18n.summary}: <span class="badge ${state.audit.level.key}">${state.audit.level.label}</span> ${state.audit.finalScore!=null?`${state.audit.finalScore}%.`:'sem itens aplicáveis.'} ${i18n.scale}`:'Execute a auditoria para visualizar os níveis de aprovação.';el.criteriaRows.innerHTML=state.audit?state.audit.results.map(r=>{const c=CRITERIA.find(x=>x.id===r.criterion),approval=r.score==null?'N/A':`${r.score}% (${r.ok}/${r.total})`;return`<tr><td>${esc(c.label)}</td><td><span class="badge ${r.level.key}">${r.level.label}</span></td><td>${approval}</td><td>${r.weight}</td><td>${esc(r.evidence)}</td></tr>`}).join(''):'<tr><td colspan="5">Sem dados.</td></tr>';el.fileRows.innerHTML=state.fileSummaries.length?state.fileSummaries.map(f=>`<tr><td>${esc(f.name)}</td><td>${esc(f.precheck||'Aprovado')}</td><td>${esc(f.schema||'Não identificado')}</td><td>${bytes(f.size)}</td><td>${(f.objects||[]).length}</td><td>${(f.walls||[]).length}</td><td>${esc(f.projectName||'Não identificado')}</td></tr>`).join(''):'<tr><td colspan="7">Sem dados.</td></tr>';renderExecutiveSummary();updateOnboarding()}
 function fit(){if(state.models.length===1){viewer.cameraFlight.flyTo(state.models[0]);return}const ids=viewer.scene.visibleObjectIds||[];if(ids.length&&viewer.scene.getAABB)viewer.cameraFlight.flyTo({aabb:viewer.scene.getAABB(ids)})}
 function zoom(m){const eye=viewer.camera.eye,look=viewer.camera.look;viewer.camera.eye=[look[0]+(eye[0]-look[0])*m,look[1]+(eye[1]-look[1])*m,look[2]+(eye[2]-look[2])*m]}
 el.exportJson.onclick=()=>exportReport('json');el.exportCsv.onclick=()=>exportReport('csv');el.exportHtml.onclick=()=>exportReport('html');el.saveHistory.onclick=saveValidationHistory;document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-mode]').forEach(x=>x.classList.remove('active'));b.classList.add('active');el.selected.textContent=b.dataset.mode==='pan'?'Pan: arraste com o botao direito ou Shift + arraste no viewer.':'Orbit: arraste com o botao esquerdo, use scroll para zoom e clique para selecionar.'});el.viewer.addEventListener('wheel',e=>{e.preventDefault();e.stopPropagation()},{passive:false});el.file.onchange=e=>loadFiles(e.target.files);['dragenter','dragover'].forEach(name=>el.drop.addEventListener(name,e=>{e.preventDefault();el.drop.classList.add('is-drag')}));['dragleave','drop'].forEach(name=>el.drop.addEventListener(name,e=>{e.preventDefault();el.drop.classList.remove('is-drag')}));el.drop.addEventListener('drop',e=>loadFiles(e.dataTransfer.files));el.audit.onclick=runAudit;document.querySelector('#zin').onclick=()=>zoom(.78);document.querySelector('#zout').onclick=()=>zoom(1.28);document.querySelector('#fit').onclick=fit;viewer.scene.input.on('mouseclicked',coords=>{const hit=viewer.scene.pick({canvasPos:coords,pickSurface:true});if(!hit?.entity){clearSelection();return}selectEntity(hit.entity)});
