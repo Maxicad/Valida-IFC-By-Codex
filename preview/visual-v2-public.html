@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Valida IFC — MaxiCAD Visual v2 (Preview)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Maxicad/Valida-IFC-By-Codex@main/docs/visual-v2/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-brand">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#" aria-label="MaxiCAD Valida IFC">
+        <div class="brand-mark">MC</div>
+        <span class="ms-2 d-none d-sm-inline">MaxiCAD <small class="text-muted">Valida IFC</small></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Funcionalidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#try">Testar</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/Maxicad/Valida-IFC-By-Codex" target="_blank">Repositório</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero bg-light text-dark py-5">
+    <div class="container d-flex align-items-center">
+      <div class="row w-100 gy-4 align-items-center">
+        <div class="col-md-6 order-2 order-md-1">
+          <h1 class="display-5">Validação IFC rápida e integrável</h1>
+          <p class="lead">Interface leve para validar arquivos IFC com foco em openBIM — visual moderno para testes e demonstrações.</p>
+          <p>
+            <a class="btn btn-primary btn-lg me-2" href="#try">Testar agora</a>
+            <a class="btn btn-outline-secondary btn-lg" href="#features">Ver funcionalidades</a>
+          </p>
+        </div>
+        <div class="col-md-6 text-center order-1 order-md-2">
+          <img src="https://cdn.jsdelivr.net/gh/Maxicad/Valida-IFC-By-Codex@main/docs/visual-v2/preview.svg" alt="Preview" class="img-fluid preview-img" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <section id="features" class="mb-5">
+        <h2 class="mb-4">O que oferece</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Resumo de esquema IFC</h5>
+                <p class="card-text">Detecta versão/schema e apresenta sumário dos tipos presentes no arquivo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Checks rápidos</h5>
+                <p class="card-text">Valida critérios básicos de consistência e mostra resultados em checklist.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Integração</h5>
+                <p class="card-text">Projetado para fácil integração com APIs e fluxos de CI/CD.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="try" class="mb-5">
+        <h2 class="mb-4">Testar localmente</h2>
+        <p>Para testar esta página localmente (e o projeto):</p>
+        <pre class="p-3 bg-light border rounded">git clone git@github.com:Maxicad/Valida-IFC-By-Codex.git
+cd Valida-IFC-By-Codex
+npm install
+npm start
+# Abra http://localhost:3000/docs/visual-v2/</pre>
+        <p class="text-muted small">(O <code>npm install</code> pode não ser necessário se o projeto for estático.)</p>
+      </section>
+
+      <section class="mb-5">
+        <h2 class="mb-4">Preview interativo</h2>
+        <div class="card p-4">
+          <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+            <input id="fileInput" class="form-control form-control-lg" type="file" accept=".ifc,.IFC" />
+            <button id="analyzeBtn" class="btn btn-success btn-lg">Analisar arquivo (simulação)</button>
+          </div>
+          <div id="result" class="mt-3" style="min-height:60px"></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="py-4 bg-dark text-white">
+    <div class="container d-flex justify-content-between align-items-center flex-column flex-md-row gap-2">
+      <div>© MaxiCAD — Valida IFC</div>
+      <div><a class="text-white" href="https://github.com/Maxicad/Valida-IFC-By-Codex" target="_blank">Ver no GitHub</a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const analyzeBtn = document.getElementById('analyzeBtn');
+    const fileInput = document.getElementById('fileInput');
+    const result = document.getElementById('result');
+
+    analyzeBtn.addEventListener('click', () => {
+      if (!fileInput.files || !fileInput.files.length) {
+        result.innerHTML = '<div class="alert alert-warning">Selecione um arquivo IFC para simular a análise.</div>';
+        return;
+      }
+      const name = fileInput.files[0].name;
+      result.innerHTML = '<div class="alert alert-info">Analisando ' + name + ' — simulação concluída. Nenhum erro crítico encontrado.</div>';
+    });
+  </script>
+</body>
+</html>
