@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Valida IFC — MaxiCAD Modern (Bootstrap)</title>
+  <title>Valida IFC — MaxiCAD Modern (Dark Gold)</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Maxicad/Valida-IFC-By-Codex@main/docs/modern-bootstrap/styles.css">
+  <link rel="stylesheet" href="/docs/modern-bootstrap/styles.css">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-brand">
+<body class="bg-dark-theme text-light">
+  <nav class="navbar navbar-expand-lg bg-transparent">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
         <div class="brand-mark">MC</div>
         <div class="ms-2 d-none d-sm-block">
-          <div class="h6 mb-0">MaxiCAD</div>
+          <div class="h6 mb-0 text-light">MaxiCAD</div>
           <small class="text-muted">Valida IFC</small>
         </div>
       </a>
@@ -22,33 +22,45 @@
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#features">Funcionalidades</a></li>
-          <li class="nav-item"><a class="nav-link" href="#try">Testar</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://github.com/Maxicad/Valida-IFC-By-Codex" target="_blank">Repositório</a></li>
+          <li class="nav-item"><a class="nav-link text-light active" href="#">Início</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#features">Funcionalidades</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="#try">Testar</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="https://github.com/Maxicad/Valida-IFC-By-Codex" target="_blank">Repositório</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="py-5 hero-modern">
+  <header class="hero-modern py-5">
     <div class="container">
       <div class="row align-items-center gy-4">
         <div class="col-lg-6">
-          <h1 class="display-6 fw-bold">Validação IFC — mais rápida, visual e confiável</h1>
-          <p class="lead text-muted">Ferramenta leve para validar arquivos IFC com foco em openBIM. Interface moderna, responsiva e pronta para integração.</p>
-          <div class="d-flex gap-2">
-            <a class="btn btn-primary btn-lg" href="#try">Testar agora</a>
-            <a class="btn btn-outline-secondary btn-lg" href="#features">Ver recursos</a>
+          <h1 class="display-5 fw-bold text-light">Validação IFC — visual moderno e confiável</h1>
+          <p class="lead text-muted">Tool leve para validar IFC com foco em openBIM. Tema escuro refinado com acentos dourados.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a class="btn btn-gold btn-lg" href="#try">Testar agora</a>
+            <a class="btn btn-outline-light btn-lg" href="#features">Ver recursos</a>
           </div>
-          <ul class="mt-4 list-unstyled d-flex gap-3">
-            <li class="badge bg-light text-dark py-2 px-3 shadow-sm">IFC schema detection</li>
-            <li class="badge bg-light text-dark py-2 px-3 shadow-sm">Checks rápidos</li>
-            <li class="badge bg-light text-dark py-2 px-3 shadow-sm">Integração API</li>
+          <ul class="mt-4 list-unstyled d-flex gap-2">
+            <li class="badge bg-surface text-light py-2 px-3">IFC schema</li>
+            <li class="badge bg-surface text-light py-2 px-3">Checks rápidos</li>
+            <li class="badge bg-surface text-light py-2 px-3">CI/CD</li>
           </ul>
         </div>
         <div class="col-lg-6 text-center">
-          <img src="https://cdn.jsdelivr.net/gh/Maxicad/Valida-IFC-By-Codex@main/docs/visual-v2/preview.svg" alt="Preview" class="img-fluid modern-preview">
+          <!-- SVG with gold accents -->
+          <svg class="modern-preview" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Preview image">
+            <rect width="640" height="360" rx="12" fill="#0b0b0b"/>
+            <g transform="translate(40,40)">
+              <rect width="240" height="160" rx="8" fill="#0f0f0f" stroke="#1a1a1a"/>
+              <rect x="260" width="320" height="160" rx="8" fill="#090909" stroke="#1a1a1a"/>
+              <g transform="translate(12,12)">
+                <circle cx="20" cy="20" r="12" fill="#D4AF37" />
+                <rect x="48" y="8" width="120" height="14" rx="6" fill="#2b2b2b" stroke="#3b3b3b"/>
+                <rect x="48" y="32" width="80" height="10" rx="5" fill="#151515"/>
+              </g>
+            </g>
+          </svg>
         </div>
       </div>
     </div>
@@ -59,26 +71,26 @@
       <section id="features" class="mb-5">
         <div class="row g-4 align-items-stretch">
           <div class="col-md-4">
-            <div class="card h-100">
+            <div class="card h-100 bg-surface">
               <div class="card-body">
                 <h5 class="card-title">Análise de esquema</h5>
-                <p class="card-text text-muted">Detecta automaticamente a versão do IFC e entrega um resumo dos tipos e entidades.</p>
+                <p class="card-text text-muted">Detecta a versão do IFC e apresenta um resumo das entidades.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card h-100">
+            <div class="card h-100 bg-surface">
               <div class="card-body">
-                <h5 class="card-title">Relatórios rápidos</h5>
-                <p class="card-text text-muted">Checks configuráveis e relatórios em formato legível para integração com QA.</p>
+                <h5 class="card-title">Relatórios</h5>
+                <p class="card-text text-muted">Checks configuráveis e relatórios legíveis para QA.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card h-100">
+            <div class="card h-100 bg-surface">
               <div class="card-body">
-                <h5 class="card-title">Integração contínua</h5>
-                <p class="card-text text-muted">Casos de uso para CI/CD e APIs para automação de validação.</p>
+                <h5 class="card-title">Integração</h5>
+                <p class="card-text text-muted">Exemplos de integração com CI/CD e APIs.</p>
               </div>
             </div>
           </div>
@@ -89,17 +101,17 @@
         <div class="row align-items-center">
           <div class="col-md-6">
             <h3>Teste rápido</h3>
-            <p class="text-muted">Envie um IFC e veja um resultado simulado sem upload ao servidor.</p>
-            <div class="card p-3 shadow-sm">
+            <p class="text-muted">Envie um IFC e veja uma simulação local de validação.</p>
+            <div class="card p-3 bg-surface shadow-sm">
               <div class="d-flex flex-column flex-sm-row gap-2">
-                <input id="fileInput" class="form-control" type="file" accept=".ifc,.IFC">
-                <button id="analyzeBtn" class="btn btn-success">Analisar (simulação)</button>
+                <input id="fileInput" class="form-control bg-dark text-light border-1" type="file" accept=".ifc,.IFC">
+                <button id="analyzeBtn" class="btn btn-gold">Analisar</button>
               </div>
               <div id="result" class="mt-3"></div>
             </div>
           </div>
           <div class="col-md-6 text-center">
-            <div class="ratio ratio-16x9 bg-secondary bg-opacity-10 rounded d-flex align-items-center justify-content-center">
+            <div class="ratio ratio-16x9 rounded d-flex align-items-center justify-content-center bg-surface">
               <div class="text-center text-muted">Área de visualização (em desenvolvimento)</div>
             </div>
           </div>
@@ -109,10 +121,10 @@
     </div>
   </main>
 
-  <footer class="py-4 bg-dark text-white">
+  <footer class="py-4 bg-footer text-muted">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
       <div>© MaxiCAD — Valida IFC</div>
-      <div><a class="text-white" href="https://github.com/Maxicad/Valida-IFC-By-Codex" target="_blank">Ver no GitHub</a></div>
+      <div><a class="text-gold" href="https://github.com/Maxicad/Valida-IFC-By-Codex" target="_blank">Ver no GitHub</a></div>
     </div>
   </footer>
 
@@ -124,11 +136,11 @@
 
     analyzeBtn.addEventListener('click', () => {
       if (!fileInput.files || !fileInput.files.length) {
-        result.innerHTML = '<div class="alert alert-warning">Selecione um arquivo IFC para simular a análise.</div>';
+        result.innerHTML = '<div class="alert alert-warning bg-transparent border border-warning text-warning">Selecione um arquivo IFC para simular a análise.</div>';
         return;
       }
       const name = fileInput.files[0].name;
-      result.innerHTML = '<div class="alert alert-success">Simulação: ' + name + ' validado. Status: OK</div>';
+      result.innerHTML = '<div class="alert alert-success bg-transparent border border-success text-success">Simulação: ' + name + ' validado. Status: OK</div>';
     });
   </script>
 </body>
