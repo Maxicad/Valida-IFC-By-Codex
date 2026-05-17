@@ -1,0 +1,38 @@
+:root{
+  --bg:#0b0b0b;
+  --surface:#0f0f10;
+  --muted:#cfcfcf;
+  --text:#f3f3f3;
+  --gold:#D4AF37;
+}
+
+body.bg-dark-theme{background:var(--bg);color:var(--text);font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial}
+
+.site-header{border-bottom:1px solid rgba(255,255,255,0.03)}
+.brand-mark{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--gold),#f7d57a);display:flex;align-items:center;justify-content:center;color:#0b0b0b;font-weight:700}
+
+.hero{background:linear-gradient(180deg,rgba(212,175,55,0.03),transparent)}
+
+.feature-list{margin-top:1rem;padding-left:1rem}
+.feature-list li{list-style:disc;margin-bottom:0.5rem;color:var(--muted)}
+
+.bg-surface{background:linear-gradient(180deg,var(--surface),#0b0b0b);border:1px solid rgba(255,255,255,0.03);}
+
+.btn-gold{background:var(--gold);color:#0b0b0b;border:none;box-shadow:0 6px 18px rgba(212,175,55,0.12);transition:transform .15s ease,box-shadow .15s ease}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(212,175,55,0.18)}
+
+.text-gold{color:var(--gold);font-weight:600}
+.border-gold{border:2px solid rgba(212,175,55,0.08)}
+
+.plan{background:transparent;border:1px solid rgba(255,255,255,0.03)}
+
+.mock-device{max-width:520px}
+.device-screen{width:100%;height:auto}
+
+.placeholder-lines .line{height:10px;background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.04));margin-bottom:8px;border-radius:6px}
+.placeholder-lines .line.short{width:60%}
+
+@media (max-width:767.98px){
+  .mock-device{max-width:320px}
+  .brand-mark{width:38px;height:38px}
+}

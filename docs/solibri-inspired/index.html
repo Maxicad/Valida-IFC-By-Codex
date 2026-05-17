@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Valida IFC — Starter (Solibri-inspired)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/docs/solibri-inspired/styles.css">
+</head>
+<body class="bg-dark-theme text-light">
+  <header class="site-header py-4">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <div class="brand-mark">MC</div>
+        <div>
+          <div class="h6 mb-0">MaxiCAD</div>
+          <small class="text-muted">Valida IFC</small>
+        </div>
+      </div>
+      <div>
+        <a class="btn btn-outline-light me-2" href="#features">Recursos</a>
+        <a class="btn btn-gold" href="#try">Teste grátis</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold">Validação IFC simples, rápida e confiável</h1>
+          <p class="lead text-muted">Analise arquivos IFC com checagens inteligentes, relatórios limpos e integração fácil ao seu fluxo de trabalho.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a class="btn btn-gold btn-lg" href="#try">Teste grátis</a>
+            <a class="btn btn-outline-light btn-lg" href="#pricing">Planos</a>
+          </div>
+          <ul class="mt-4 feature-list">
+            <li>Detecção automática de schema IFC</li>
+            <li>Relatórios CSV / JSON prontos para integração</li>
+            <li>Checks rápidos para QA em CI</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="mock-device mx-auto">
+            <!-- Inline illustrative SVG -->
+            <svg viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg" class="device-screen" role="img" aria-label="App preview">
+              <rect width="560" height="320" rx="12" fill="#0b0b0b" stroke="#1a1a1a"/>
+              <g transform="translate(24,24)">
+                <rect width="240" height="120" rx="6" fill="#101010" stroke="#2a2a2a"/>
+                <rect x="260" width="232" height="120" rx="6" fill="#0f0f0f" stroke="#2a2a2a"/>
+                <g transform="translate(6,6)">
+                  <circle cx="18" cy="18" r="12" fill="#D4AF37" />
+                  <rect x="46" y="6" width="120" height="12" rx="6" fill="#1b1b1b"/>
+                  <rect x="46" y="28" width="84" height="8" rx="4" fill="#111"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Recursos principais</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card bg-surface h-100">
+            <div class="card-body">
+              <h5 class="card-title">Inspeção automática</h5>
+              <p class="card-text text-muted">Identifique inconsistências e entidades faltantes com análise automatizada do modelo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-surface h-100">
+            <div class="card-body">
+              <h5 class="card-title">Relatórios claros</h5>
+              <p class="card-text text-muted">Gere relatórios orientados por tarefas para integração com processos de QA.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-surface h-100">
+            <div class="card-body">
+              <h5 class="card-title">Integração CI</h5>
+              <p class="card-text text-muted">Execute checagens em pipelines e previna regressões de qualidade do modelo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="py-5 bg-gradient">
+    <div class="container">
+      <h2 class="mb-4 text-light">Planos</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card plan h-100">
+            <div class="card-body">
+              <h5 class="card-title">Starter</h5>
+              <p class="display-6 text-gold">Gratuito</p>
+              <ul class="text-muted">
+                <li>Checks básicos</li>
+                <li>Relatórios locais</li>
+                <li>Uso pessoal</li>
+              </ul>
+              <a class="btn btn-outline-light mt-3" href="#try">Começar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card plan h-100 border-gold">
+            <div class="card-body">
+              <h5 class="card-title">Pro</h5>
+              <p class="display-6 text-gold">R$ 49/mês</p>
+              <ul class="text-muted">
+                <li>Checks avançados</li>
+                <li>Integração API</li>
+                <li>Suporte prioritário</li>
+              </ul>
+              <a class="btn btn-gold mt-3" href="#try">Assinar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card plan h-100">
+            <div class="card-body">
+              <h5 class="card-title">Enterprise</h5>
+              <p class="display-6 text-gold">Sob consulta</p>
+              <ul class="text-muted">
+                <li>Deploys privados</li>
+                <li>SLAs e integrações</li>
+                <li>Treinamento</li>
+              </ul>
+              <a class="btn btn-outline-light mt-3" href="#contact">Contato</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="try" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h3 class="text-light">Teste rápido</h3>
+          <p class="text-muted">Faça uma simulação local sem enviar arquivos ao servidor.</p>
+          <div class="card p-3 bg-surface shadow-sm">
+            <div class="d-flex flex-column flex-sm-row gap-2">
+              <input id="fileInput" class="form-control bg-dark text-light border-1" type="file" accept=".ifc,.IFC">
+              <button id="analyzeBtn" class="btn btn-gold">Analisar</button>
+            </div>
+            <div id="result" class="mt-3"></div>
+          </div>
+        </div>
+        <div class="col-md-6 text-center">
+          <div class="card bg-surface p-4">
+            <h5 class="mb-2">Resumo da análise</h5>
+            <p class="text-muted">A saída aqui mostra um sumário das checagens e o que foi encontrado.</p>
+            <div class="placeholder-lines mt-3">
+              <div class="line"></div>
+              <div class="line short"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 bg-footer text-muted">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>© MaxiCAD — Valida IFC</div>
+      <div><a class="text-gold" href="https://github.com/Maxicad/Valida-IFC-By-Codex" target="_blank">Ver no GitHub</a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const analyzeBtn = document.getElementById('analyzeBtn');
+    const fileInput = document.getElementById('fileInput');
+    const result = document.getElementById('result');
+
+    analyzeBtn.addEventListener('click', () => {
+      if (!fileInput.files || !fileInput.files.length) {
+        result.innerHTML = '<div class="alert alert-warning bg-transparent border border-warning text-warning">Selecione um arquivo IFC para simular a análise.</div>';
+        return;
+      }
+      const name = fileInput.files[0].name;
+      result.innerHTML = '<div class="alert alert-success bg-transparent border border-success text-success">Simulação: ' + name + ' validado. Status: OK</div>';
+    });
+  </script>
+</body>
+</html>
