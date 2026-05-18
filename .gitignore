@@ -2,10 +2,12 @@ node_modules/
 dist/
 .DS_Store
 Thumbs.db
+desktop.ini
 *.log
 *.tmp
 *.bak
 .env
 .env.*
 .git.invalid-backup-*/
+data/
 data/validation-history.json
